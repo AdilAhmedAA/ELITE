@@ -1,0 +1,1755 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WIPOV</title>
+    <link rel="stylesheet" href="assets/css/Style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+      integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css"
+      integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container-fluid">
+        <div class="inner justify-content-between">
+          <!-- toggler -->
+          <div class="brand-logo">
+            <a href=""><img src="" alt="" /></a>
+          </div>
+          <div class="navmenus">
+            <nav>
+              <ul class="Navitems d-none d-lg-flex">
+                <li><a href="Rent.html">Rent</a></li>
+                <li><a href="Buy.html">Buy</a></li>
+              </ul>
+              <ul class="Navitems d-none d-lg-flex">
+                <li><a href="">Building Info</a></li>
+              </ul>
+              <ul class="Navitems d-none d-lg-flex">
+                <li><a href="Sell.html">Sell</a></li>
+                <li><a href="property-management.html">Property Management</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <button
+            class="btn canvas-toggler float-start"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvas"
+            role="button"
+          >
+            <i
+              class="fa-solid fa-bars"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvas"
+            ></i>
+          </button>
+
+          <!-- <div class="nav-actions d-none d-lg-flex">
+            <a href="">Language</a>
+            <div class="header-search d-flex align-items-center">
+              <input type="search" class="search-input" placeholder="Search" />
+              <a class="search-toggler"><i class="fas fa-search"></i></a>
+            </div>
+            <a href=""><i class="fa-regular fa-user"></i></a>
+          </div> -->
+          <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvas"
+            data-bs-keyboard="false"
+            data-bs-backdrop="false"
+          >
+            <div class="offcanvas-body px-0">
+              <ul
+                class="Mainsidenav nav flex-column mb-sm-auto mb-0 align-items-start"
+                id="menu"
+              >
+                <li class="nav-item">
+                  <button
+                    type="button"
+                    class="btn-close text-reset"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </li>
+                <li class="nav-item">
+                  <a href="Rent.html" class="nav-link text-truncate">
+                    <span class="d-sm-inline">Rent</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-truncate dropdown-anchor"
+                    data-bs-toggle="collapse"
+                    href="#Buy"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="Buy"
+                    ><i class="fa-solid fa-angle-down fs-6 me-2"></i>Buy
+                  </a>
+                  <div class="collapse" id="Buy">
+                    <div class="card-body">
+                      <a href="">Residential</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a href="Sell.html" class="nav-link text-truncate">
+                    <span class="d-sm-inline">Sell</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-truncate dropdown-anchor"
+                    data-bs-toggle="collapse"
+                    href="property-management.html"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="Mannage"
+                    ><i class="fa-solid fa-angle-down fs-6 me-2"></i>Mannagement
+                  </a>
+                  <div class="collapse" id="Mannage">
+                    <div class="card-body">
+                      <a href="">Residential</a>
+                      <a href="">Build to Rent</a>
+                      <a href="">Commercial</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link text-truncate">
+                    <span class="d-sm-inline">Projects</span>
+                  </a>
+                </li>
+              </ul>
+              <ul
+                class="Secondarysidenav nav nav-pills flex-column mb-sm-auto mb-0 align-items-start"
+                id="menu"
+              >
+                <li class="nav-item">
+                  <a href="#" class="nav-link text-truncate">
+                    <span class="d-sm-inline">About Elite</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-truncate dropdown-anchor"
+                    data-bs-toggle="collapse"
+                    href="#Realpeople"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="Realpeople"
+                    ><i class="fa-solid fa-angle-down fs-6 me-2"></i>Real people
+                  </a>
+                  <div class="collapse" id="Realpeople">
+                    <div class="card-body">
+                      <a href="">Our Team</a>
+                      <a href="">Become a Liveability Expert</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link text-truncate">
+                    <span class="d-sm-inline">Place Guides</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-truncate dropdown-anchor"
+                    data-bs-toggle="collapse"
+                    href="#HandBook"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="HandBook"
+                    ><i class="fa-solid fa-angle-down fs-6 me-2"></i>Home
+                    HandBook
+                  </a>
+                  <div class="collapse" id="HandBook">
+                    <div class="card-body">
+                      <a href="">Home HandBook</a>
+                      <a href="">Prospective Renters</a>
+                      <a href="">Building Information</a>
+                      <a href="">Maintenance</a>
+                      <a href="">Maintenance Tips</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-truncate dropdown-anchor"
+                    data-bs-toggle="collapse"
+                    href="#ProjectMarketing"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="ProjectMarketing"
+                    ><i class="fa-solid fa-angle-down fs-6 me-2"></i>Project
+                    Marketing
+                  </a>
+                  <div class="collapse" id="ProjectMarketing">
+                    <div class="card-body">
+                      <a href="">Real Service</a>
+                      <a href="">Real Success</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link text-truncate">
+                    <span class="d-sm-inline">StudioElite</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link text-truncate">
+                    <span class="d-sm-inline">News</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link text-truncate">
+                    <span class="d-sm-inline">Contact</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container-fluid">
+        <div class="inner">
+          <video autoplay muted loop>
+            <source src="samplevideo.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </section>
+    <section class="hero-text">
+      <div class="container-fluid">
+        <div class="inner">
+          <div class="head text-start">
+            <p>
+              We are experts in Urban Liveability, helping people across
+              Melbourne to rent, purchase, and sell great homes for real living.
+              Our expertise is unrivalled; our service unmatched. Known for our
+              people and real results across the Melbourne real estate industry,
+              let us show you the Elite difference, today.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="featured-listing">
+      <div class="container-fluid">
+        <div class="inner">
+          <div
+            class="head d-flex w-100 justify-content-between align-items-center"
+          >
+            <h2>FEATURED SALES <span class="colored">LISTINGS</span></h2>
+            <a href="">View All</a>
+          </div>
+          <div class="row mt-5">
+            <div class="col-md-4">
+              <div class="listing">
+                <div class="slider-listing">
+                  <div>
+                    <img src="assets/images/slider1.jpg" alt="" />
+                  </div>
+                  <div>
+                    <img src="assets/images/slider2.jpg" alt="" />
+                  </div>
+                  <div>
+                    <img src="assets/images/slider3.jpg" alt="" />
+                  </div>
+                  <div>
+                    <img src="assets/images/slider4.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="listing-details">
+                  <p>3402/245 City Road, Southbank, VIC 3006</p>
+                  <ul class="listing-numbers d-flex gap-3">
+                    <li>
+                      <span><i class="bx bx-bed fs-5"></i>2</span>
+                    </li>
+                    <li>
+                      <span><i class="bx bx-bath fs-5"></i>2</span>
+                    </li>
+                    <li>
+                      <span><i class="bx bxs-car-garage fs-5"></i>1</span>
+                    </li>
+                  </ul>
+                  <div class="pricing-wrapper">
+                    <p>$660,000 - $680,000</p>
+                    <a href=" " class="d-block w-100"
+                      ><div>
+                        <span>Book inspection</span
+                        ><i
+                          class="bx bx-arrow-back bx-rotate-180 fs-5"
+                        ></i></div
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="listing">
+                <div class="slider-listing">
+                  <div>
+                    <img src="assets/images/slider1.jpg" alt="" />
+                  </div>
+                  <div>
+                    <img src="assets/images/slider2.jpg" alt="" />
+                  </div>
+                  <div>
+                    <img src="assets/images/slider3.jpg" alt="" />
+                  </div>
+                  <div>
+                    <img src="assets/images/slider4.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="listing-details">
+                  <p>3402/245 City Road, Southbank, VIC 3006</p>
+                  <ul class="listing-numbers d-flex gap-3">
+                    <li>
+                      <span><i class="bx bx-bed fs-5"></i>2</span>
+                    </li>
+                    <li>
+                      <span><i class="bx bx-bath fs-5"></i>2</span>
+                    </li>
+                    <li>
+                      <span><i class="bx bxs-car-garage fs-5"></i>1</span>
+                    </li>
+                  </ul>
+                  <div class="pricing-wrapper">
+                    <p>$660,000 - $680,000</p>
+                    <a href=" " class="d-block w-100"
+                      ><div>
+                        <span>Book inspection</span
+                        ><i
+                          class="bx bx-arrow-back bx-rotate-180 fs-5"
+                        ></i></div
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="listing">
+                <div class="slider-listing">
+                  <div>
+                    <img src="assets/images/slider1.jpg" alt="" />
+                  </div>
+                  <div>
+                    <img src="assets/images/slider2.jpg" alt="" />
+                  </div>
+                  <div>
+                    <img src="assets/images/slider3.jpg" alt="" />
+                  </div>
+                  <div>
+                    <img src="assets/images/slider4.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="listing-details">
+                  <p>3402/245 City Road, Southbank, VIC 3006</p>
+                  <ul class="listing-numbers d-flex gap-3">
+                    <li>
+                      <span><i class="bx bx-bed fs-5"></i>2</span>
+                    </li>
+                    <li>
+                      <span><i class="bx bx-bath fs-5"></i>2</span>
+                    </li>
+                    <li>
+                      <span><i class="bx bxs-car-garage fs-5"></i>1</span>
+                    </li>
+                  </ul>
+                  <div class="pricing-wrapper">
+                    <p>$660,000 - $680,000</p>
+                    <a href=" " class="d-block w-100"
+                      ><div>
+                        <span>Book inspection</span
+                        ><i
+                          class="bx bx-arrow-back bx-rotate-180 fs-5"
+                        ></i></div
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- <section class="newdevelopments">
+      <div class="container-fluid">
+        <div class="inner">
+          <div class="row flex-column-reverse flex-sm-row">
+            <div class="col-sm-5">
+              <div class="cta-dark h-100">
+                <p>New <span class="colored">Development</span></p>
+                <div class="head">
+                  <h2>Compose, Hawthorn</h2>
+                </div>
+                <a
+                  href=""
+                  class="d-flex justify-content-between align-items-center w-100"
+                  ><span>Explore Project</span
+                  ><i class="bx bx-arrow-back bx-rotate-180 fs-5"></i
+                ></a>
+              </div>
+            </div>
+            <div class="col-sm-7">
+              <div class="image-container">
+                <img src="assets/images/Walkway.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- <div class="testimonials">
+      <div class="container-fluid">
+        <div class="inner text-center">
+          <div class="head">
+            <h2><span class="colored">Real</span></h2>
+            <h2>Experience</h2>
+          </div>
+          <div class="testimonial-slider">
+            <div>
+              <div class="card-testimonial text-center">
+                <div class="head">
+                  <p>
+                    “I am really happy with Elite managing my apartment, they
+                    have gone above and beyond their job description. James was
+                    on top of everything from the beginning and Courtney has
+                    used her contacts for my benefit. They have great
+                    communication skills - there were no delays, they were onto
+                    it all informing and consulting with me every step of the
+                    way. I had previously used another well known real estate
+                    that proved pretty hopeless on every level. I highly
+                    recommend them for property management.”
+                  </p>
+                </div>
+                <div
+                  class="ratting d-flex align-items-center justify-content-center"
+                >
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <span><strong>Dmitri Dalla-Riva</strong> – 18/01/2022</span>
+              </div>
+            </div>
+            <div>
+              <div class="card-testimonial text-center">
+                <div class="head">
+                  <p>
+                    “I am really happy with Elite managing my apartment, they
+                    have gone above and beyond their job description. James was
+                    on top of everything from the beginning and Courtney has
+                    used her contacts for my benefit. They have great
+                    communication skills - there were no delays, they were onto
+                    it all informing and consulting with me every step of the
+                    way. I had previously used another well known real estate
+                    that proved pretty hopeless on every level. I highly
+                    recommend them for property management.”
+                  </p>
+                </div>
+                <div
+                  class="ratting d-flex align-items-center justify-content-center"
+                >
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <span><strong>Dmitri Dalla-Riva</strong> – 18/01/2022</span>
+              </div>
+            </div>
+            <div>
+              <div class="card-testimonial text-center">
+                <div class="head">
+                  <p>
+                    “I am really happy with Elite managing my apartment, they
+                    have gone above and beyond their job description. James was
+                    on top of everything from the beginning and Courtney has
+                    used her contacts for my benefit. They have great
+                    communication skills - there were no delays, they were onto
+                    it all informing and consulting with me every step of the
+                    way. I had previously used another well known real estate
+                    that proved pretty hopeless on every level. I highly
+                    recommend them for property management.”
+                  </p>
+                </div>
+                <div
+                  class="ratting d-flex align-items-center justify-content-center"
+                >
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <span><strong>Dmitri Dalla-Riva</strong> – 18/01/2022</span>
+              </div>
+            </div>
+            <div>
+              <div class="card-testimonial text-center">
+                <div class="head">
+                  <p>
+                    “I am really happy with Elite managing my apartment, they
+                    have gone above and beyond their job description. James was
+                    on top of everything from the beginning and Courtney has
+                    used her contacts for my benefit. They have great
+                    communication skills - there were no delays, they were onto
+                    it all informing and consulting with me every step of the
+                    way. I had previously used another well known real estate
+                    that proved pretty hopeless on every level. I highly
+                    recommend them for property management.”
+                  </p>
+                </div>
+                <div
+                  class="ratting d-flex align-items-center justify-content-center"
+                >
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <span><strong>Dmitri Dalla-Riva</strong> – 18/01/2022</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- <section class="featured-listing">
+      <div class="container-fluid">
+        <div class="inner">
+          <div
+            class="head d-flex w-100 justify-content-between align-items-center"
+          >
+            <h2>FEATURED SALES <span class="colored">LISTINGS</span></h2>
+            <a href="">View All</a>
+          </div>
+          <div class="row mt-5">
+            <div class="col-md-4">
+              <div class="listing">
+                <div class="slider-listing">
+                  <div>
+                    <img src="assets/images/slider1.jpg" alt="" />
+                  </div>
+                  <div>
+                    <img src="assets/images/slider2.jpg" alt="" />
+                  </div>
+                  <div>
+                    <img src="assets/images/slider3.jpg" alt="" />
+                  </div>
+                  <div>
+                    <img src="assets/images/slider4.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="listing-details">
+                  <p>3402/245 City Road, Southbank, VIC 3006</p>
+                  <ul class="listing-numbers d-flex gap-3">
+                    <li>
+                      <span><i class="bx bx-bed fs-5"></i>2</span>
+                    </li>
+                    <li>
+                      <span><i class="bx bx-bath fs-5"></i>2</span>
+                    </li>
+                    <li>
+                      <span><i class="bx bxs-car-garage fs-5"></i>1</span>
+                    </li>
+                  </ul>
+                  <div class="pricing-wrapper">
+                    <p>$660,000 - $680,000</p>
+                    <a href=" " class="d-block w-100"
+                      ><div>
+                        <span>Book inspection</span
+                        ><i
+                          class="bx bx-arrow-back bx-rotate-180 fs-5"
+                        ></i></div
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="listing">
+                <div class="slider-listing">
+                  <div>
+                    <img src="assets/images/slider1.jpg" alt="" />
+                  </div>
+                  <div>
+                    <img src="assets/images/slider2.jpg" alt="" />
+                  </div>
+                  <div>
+                    <img src="assets/images/slider3.jpg" alt="" />
+                  </div>
+                  <div>
+                    <img src="assets/images/slider4.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="listing-details">
+                  <p>3402/245 City Road, Southbank, VIC 3006</p>
+                  <ul class="listing-numbers d-flex gap-3">
+                    <li>
+                      <span><i class="bx bx-bed fs-5"></i>2</span>
+                    </li>
+                    <li>
+                      <span><i class="bx bx-bath fs-5"></i>2</span>
+                    </li>
+                    <li>
+                      <span><i class="bx bxs-car-garage fs-5"></i>1</span>
+                    </li>
+                  </ul>
+                  <div class="pricing-wrapper">
+                    <p>$660,000 - $680,000</p>
+                    <a href=" " class="d-block w-100"
+                      ><div>
+                        <span>Book inspection</span
+                        ><i
+                          class="bx bx-arrow-back bx-rotate-180 fs-5"
+                        ></i></div
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="listing">
+                <div class="slider-listing">
+                  <div>
+                    <img src="assets/images/slider1.jpg" alt="" />
+                  </div>
+                  <div>
+                    <img src="assets/images/slider2.jpg" alt="" />
+                  </div>
+                  <div>
+                    <img src="assets/images/slider3.jpg" alt="" />
+                  </div>
+                  <div>
+                    <img src="assets/images/slider4.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="listing-details">
+                  <p>3402/245 City Road, Southbank, VIC 3006</p>
+                  <ul class="listing-numbers d-flex gap-3">
+                    <li>
+                      <span><i class="bx bx-bed fs-5"></i>2</span>
+                    </li>
+                    <li>
+                      <span><i class="bx bx-bath fs-5"></i>2</span>
+                    </li>
+                    <li>
+                      <span><i class="bx bxs-car-garage fs-5"></i>1</span>
+                    </li>
+                  </ul>
+                  <div class="pricing-wrapper">
+                    <p>$660,000 - $680,000</p>
+                    <a href=" " class="d-block w-100"
+                      ><div>
+                        <span>Book inspection</span
+                        ><i
+                          class="bx bx-arrow-back bx-rotate-180 fs-5"
+                        ></i></div
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="featured-listing">
+      <div class="container-fluid">
+        <div class="inner">
+          <div
+            class="head d-flex w-100 justify-content-between align-items-center"
+          >
+            <h2><span class="colored">REAL</span> PEOPLE</h2>
+            <a href="">View All</a>
+          </div>
+          <p class="fs-5">Our Team</p>
+          <div class="people-slider mt-5">
+            <div>
+              <div class="slider-image">
+                <video class="w-100" muted  loop autoplay><source src="https://mre.today/wp-content/uploads/2022/09/LauraMoody_Crop.mp4" type="video/mp4">
+                </video>
+                <div class="overlay"></div>
+                <p>Laura Moody</p>
+                <div class="content">
+                  <h2>
+                    Founder <br />
+                    - <br />
+                    <a href="mailto:pete.h@Elite.today " tabindex="0"
+                      >pete.h@Elite.today
+                    </a>
+                  </h2>
+                </div>
+                <a
+                  href=""
+                  class="d-flex justify-content-between align-items-center w-100"
+                  ><span>Learn More</span
+                  ><i class="bx bx-arrow-back bx-rotate-180 fs-6"></i
+                ></a>
+              </div>
+            </div>
+            <div>
+              <div class="slider-image">
+                <video class="w-100" muted  loop autoplay><source src="https://mre.today/wp-content/uploads/2022/09/MattMcKenna_Crop.mp4" type="video/mp4">
+                </video>
+                <div class="overlay"></div>
+                <p>Laura Moody</p>
+                <div class="content">
+                  <h2>
+                    Founder <br />
+                    - <br />
+                    <a href="mailto:pete.h@Elite.today " tabindex="0"
+                      >pete.h@Elite.today
+                    </a>
+                  </h2>
+                </div>
+                <a
+                  href=""
+                  class="d-flex justify-content-between align-items-center w-100"
+                  ><span>Learn More</span
+                  ><i class="bx bx-arrow-back bx-rotate-180 fs-6"></i
+                ></a>
+              </div>
+            </div>
+            <div>
+              <div class="slider-image">
+                <img
+                  class="w-100"
+                  src="assets/images/Pete-Hooymans-400x736.jpg"
+                  alt=""
+                />
+                <div class="overlay"></div>
+                <p>Pete Hooymas</p>
+                <div class="content">
+                  <h2>
+                    Founder <br />
+                    - <br />
+                    <a href="mailto:pete.h@Elite.today " tabindex="0"
+                      >pete.h@Elite.today
+                    </a>
+                  </h2>
+                </div>
+                <a
+                  href=""
+                  class="d-flex justify-content-between align-items-center w-100"
+                  ><span>Learn More</span
+                  ><i class="bx bx-arrow-back bx-rotate-180 fs-6"></i
+                ></a>
+              </div>
+            </div>
+            <div>
+              <div class="slider-image">
+                <img
+                  class="w-100"
+                  src="assets/images/Pete-Hooymans-400x736.jpg"
+                  alt=""
+                />
+                <div class="overlay"></div>
+                <p>Pete Hooymas</p>
+                <div class="content">
+                  <h2>
+                    Founder <br />
+                    - <br />
+                    <a href="mailto:pete.h@Elite.today " tabindex="0"
+                      >pete.h@Elite.today
+                    </a>
+                  </h2>
+                </div>
+                <a
+                  href=""
+                  class="d-flex justify-content-between align-items-center w-100"
+                  ><span>Learn More</span
+                  ><i class="bx bx-arrow-back bx-rotate-180 fs-6"></i
+                ></a>
+              </div>
+            </div>
+            <div>
+              <div class="slider-image">
+                <img
+                  class="w-100"
+                  src="assets/images/Pete-Hooymans-400x736.jpg"
+                  alt=""
+                />
+                <div class="overlay"></div>
+                <p>Pete Hooymas</p>
+                <div class="content">
+                  <h2>
+                    Founder <br />
+                    - <br />
+                    <a href="mailto:pete.h@Elite.today " tabindex="0"
+                      >pete.h@Elite.today
+                    </a>
+                  </h2>
+                </div>
+                <a
+                  href=""
+                  class="d-flex justify-content-between align-items-center w-100"
+                  ><span>Learn More</span
+                  ><i class="bx bx-arrow-back bx-rotate-180 fs-6"></i
+                ></a>
+              </div>
+            </div>
+            <div>
+              <div class="slider-image">
+                <img
+                  class="w-100"
+                  src="assets/images/Pete-Hooymans-400x736.jpg"
+                  alt=""
+                />
+                <div class="overlay"></div>
+                <p>Pete Hooymas</p>
+                <div class="content">
+                  <h2>
+                    Founder <br />
+                    - <br />
+                    <a href="mailto:pete.h@Elite.today " tabindex="0"
+                      >pete.h@Elite.today
+                    </a>
+                  </h2>
+                </div>
+                <a
+                  href=""
+                  class="d-flex justify-content-between align-items-center w-100"
+                  ><span>Learn More</span
+                  ><i class="bx bx-arrow-back bx-rotate-180 fs-6"></i
+                ></a>
+              </div>
+            </div>
+            <div>
+              <div class="slider-image">
+                <img
+                  class="w-100"
+                  src="assets/images/Pete-Hooymans-400x736.jpg"
+                  alt=""
+                />
+                <div class="overlay"></div>
+                <p>Pete Hooymas</p>
+                <div class="content">
+                  <h2>
+                    Founder <br />
+                    - <br />
+                    <a href="mailto:pete.h@Elite.today " tabindex="0"
+                      >pete.h@Elite.today
+                    </a>
+                  </h2>
+                </div>
+                <a
+                  href=""
+                  class="d-flex justify-content-between align-items-center w-100"
+                  ><span>Learn More</span
+                  ><i class="bx bx-arrow-back bx-rotate-180 fs-6"></i
+                ></a>
+              </div>
+            </div>
+            <div>
+              <div class="slider-image">
+                <img
+                  class="w-100"
+                  src="assets/images/Pete-Hooymans-400x736.jpg"
+                  alt=""
+                />
+                <div class="overlay"></div>
+                <p>Pete Hooymas</p>
+                <div class="content">
+                  <h2>
+                    Founder <br />
+                    - <br />
+                    <a href="mailto:pete.h@Elite.today " tabindex="0"
+                      >pete.h@Elite.today
+                    </a>
+                  </h2>
+                </div>
+                <a
+                  href=""
+                  class="d-flex justify-content-between align-items-center w-100"
+                  ><span>Learn More</span
+                  ><i class="bx bx-arrow-back bx-rotate-180 fs-6"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="newdevelopments yellow">
+      <div class="container-fluid">
+        <div class="inner">
+          <div class="testimonials text-center">
+            <div class="head">
+              <h2>Real</h2>
+              <h2><span class="colored">Places</span></h2>
+            </div>
+          </div>
+          <div class="row flex-column-reverse flex-sm-row">
+            <div class="col-sm-5">
+              <div class="cta-dark h-100">
+                <p>Place Guides</p>
+                <div class="head">
+                  <h2>Welcome to South Yarra</h2>
+                </div>
+                <a
+                  href=""
+                  class="d-flex justify-content-between align-items-center w-100"
+                  ><span>Discover the neighbourhood</span
+                  ><i class="bx bx-arrow-back bx-rotate-180 fs-5"></i
+                ></a>
+              </div>
+            </div>
+            <div class="col-sm-7">
+              <div class="image-container">
+                <img src="assets/images/pplaces.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- <section class="featured-listing wide-slider">
+      <div class="container-fluid">
+        <div class="inner">
+          <div
+            class="head d-flex w-100 justify-content-between align-items-center"
+          >
+            <h2>REAL <span class="colored">PEOPLE</span></h2>
+            <a href="">View All</a>
+          </div>
+          <p class="fs-5">Our Team</p>
+          <div class="wide-sliders mt-5">
+            <div>
+              <div class="slider-image">
+                <img
+                  class="w-100"
+                  src="assets/images/Pete-Hooymans-400x736.jpg"
+                  alt=""
+                />
+                <div class="overlay"></div>
+                <p>
+                  Investor Tips and Traps — What we’ve observed across 30 years
+                  in Melbourne’s property market
+                </p>
+
+                <a
+                  href=""
+                  class="d-flex justify-content-between align-items-center w-100"
+                  ><span>Learn More</span
+                  ><i class="bx bx-arrow-back bx-rotate-180 fs-6"></i
+                ></a>
+              </div>
+            </div>
+            <div>
+              <div class="slider-image">
+                <img
+                  class="w-100"
+                  src="assets/images/Pete-Hooymans-400x736.jpg"
+                  alt=""
+                />
+                <div class="overlay"></div>
+                <p>
+                  Investor Tips and Traps — What we’ve observed across 30 years
+                  in Melbourne’s property market
+                </p>
+
+                <a
+                  href=""
+                  class="d-flex justify-content-between align-items-center w-100"
+                  ><span>Learn More</span
+                  ><i class="bx bx-arrow-back bx-rotate-180 fs-6"></i
+                ></a>
+              </div>
+            </div>
+            <div>
+              <div class="slider-image">
+                <img
+                  class="w-100"
+                  src="assets/images/Pete-Hooymans-400x736.jpg"
+                  alt=""
+                />
+                <div class="overlay"></div>
+                <p>
+                  Investor Tips and Traps — What we’ve observed across 30 years
+                  in Melbourne’s property market
+                </p>
+
+                <a
+                  href=""
+                  class="d-flex justify-content-between align-items-center w-100"
+                  ><span>Learn More</span
+                  ><i class="bx bx-arrow-back bx-rotate-180 fs-6"></i
+                ></a>
+              </div>
+            </div>
+            <div>
+              <div class="slider-image">
+                <img
+                  class="w-100"
+                  src="assets/images/Pete-Hooymans-400x736.jpg"
+                  alt=""
+                />
+                <div class="overlay"></div>
+                <p>
+                  Investor Tips and Traps — What we’ve observed across 30 years
+                  in Melbourne’s property market
+                </p>
+
+                <a
+                  href=""
+                  class="d-flex justify-content-between align-items-center w-100"
+                  ><span>Learn More</span
+                  ><i class="bx bx-arrow-back bx-rotate-180 fs-6"></i
+                ></a>
+              </div>
+            </div>
+            <div>
+              <div class="slider-image">
+                <img
+                  class="w-100"
+                  src="assets/images/Pete-Hooymans-400x736.jpg"
+                  alt=""
+                />
+                <div class="overlay"></div>
+                <p>
+                  Investor Tips and Traps — What we’ve observed across 30 years
+                  in Melbourne’s property market
+                </p>
+
+                <a
+                  href=""
+                  class="d-flex justify-content-between align-items-center w-100"
+                  ><span>Learn More</span
+                  ><i class="bx bx-arrow-back bx-rotate-180 fs-6"></i
+                ></a>
+              </div>
+            </div>
+            <div>
+              <div class="slider-image">
+                <img
+                  class="w-100"
+                  src="assets/images/Pete-Hooymans-400x736.jpg"
+                  alt=""
+                />
+                <div class="overlay"></div>
+                <p>
+                  Investor Tips and Traps — What we’ve observed across 30 years
+                  in Melbourne’s property market
+                </p>
+
+                <a
+                  href=""
+                  class="d-flex justify-content-between align-items-center w-100"
+                  ><span>Learn More</span
+                  ><i class="bx bx-arrow-back bx-rotate-180 fs-6"></i
+                ></a>
+              </div>
+            </div>
+            <div>
+              <div class="slider-image">
+                <img
+                  class="w-100"
+                  src="assets/images/Pete-Hooymans-400x736.jpg"
+                  alt=""
+                />
+                <div class="overlay"></div>
+                <p>
+                  Investor Tips and Traps — What we’ve observed across 30 years
+                  in Melbourne’s property market
+                </p>
+
+                <a
+                  href=""
+                  class="d-flex justify-content-between align-items-center w-100"
+                  ><span>Learn More</span
+                  ><i class="bx bx-arrow-back bx-rotate-180 fs-6"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- <section class="locations">
+      <div class="container-fluid">
+        <div class="inner">
+          <div class="head w-100">
+            <h2>OUR <span class="colored">OFFICES</span></h2>
+            <p class="sec-small">
+              Elite's offices are pretty spectacular if we do say so ourselves.
+              Located between the tranquil banks of the Yarra and the bustle of
+              urban life on Toorak Road lies our South Yarra headquarters.
+            </p>
+            <p class="sec-small">
+              In 2017, we opened a second office in EQ Tower to cater to our
+              international and city-based real estate clients. Our dynamic,
+              friendly spaces have a first-class lounge feeling, encompassing
+              interactive spaces for effective collaboration with a
+              cutting-edge, contemporary finish.
+            </p>
+          </div>
+          <div class="row locations-map mt-5">
+            <div class="col-lg-6">
+              <div class="map">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79041.45211574933!2d-1.32998883345529!3d51.75049376998144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48713380adc41faf%3A0xc820dba8cb547402!2sOxford%2C%20UK!5e0!3m2!1sen!2s!4v1697635129026!5m2!1sen!2s"
+                  width="800"
+                  height="700"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="accordion locations-accordian" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      Elite On Russell Street
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseOne"
+                    class="accordion-collapse collapse show"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      <p>268 Russell street, Melbourne VIC 3000, Australia</p>
+                      <p>03 9663 9977</p>
+                      <div class="timings">
+                        <p>Monday: 8.30am – 5.00pm</p>
+                        <p>Tuesday: 8.30am – 5.00pm</p>
+                        <p>Wednesday: 8.30am – 5.00pm</p>
+                        <p>Thursday: 8.30am – 5.00pm</p>
+                        <p>Friday: 8.30am – 5.00pm</p>
+                        <p>Saturday 8.30am – 12.30pm</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      Elite On Elizabeth Street
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseTwo"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      <p>268 Elizabeth street, Melbourne VIC 3000, Australia</p>
+                      <p>03 9326 9977</p>
+                      <div class="timings">
+                        <p>Monday: 8.30am – 5.00pm</p>
+                        <p>Tuesday: 8.30am – 5.00pm</p>
+                        <p>Wednesday: 8.30am – 5.00pm</p>
+                        <p>Thursday: 8.30am – 5.00pm</p>
+                        <p>Friday: 8.30am – 5.00pm</p>
+                        <p>Saturday 8.30am – 12.30pm</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      Elite On Spencer Street
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseThree"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      <p>268 Spencer street, Melbourne VIC 3000, Australia</p>
+                      <p>03 9642 2298</p>
+                      <div class="timings">
+                        <p>Monday: 8.30am – 5.00pm</p>
+                        <p>Tuesday: 8.30am – 5.00pm</p>
+                        <p>Wednesday: 8.30am – 5.00pm</p>
+                        <p>Thursday: 8.30am – 5.00pm</p>
+                        <p>Friday: 8.30am – 5.00pm</p>
+                        <p>Saturday 8.30am – 12.30pm</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingfour">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapsefour"
+                      aria-expanded="false"
+                      aria-controls="collapsefour"
+                    >
+                      Elite On A'Beckett Street
+                    </button>
+                  </h2>
+                  <div
+                    id="collapsefour"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingfour"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      <p>268 A'Beckett street, Melbourne VIC 3000, Australia</p>
+                      <p>03 9088 6299</p>
+                      <div class="timings">
+                        <p>Monday: 8.30am – 5.00pm</p>
+                        <p>Tuesday: 8.30am – 5.00pm</p>
+                        <p>Wednesday: 8.30am – 5.00pm</p>
+                        <p>Thursday: 8.30am – 5.00pm</p>
+                        <p>Friday: 8.30am – 5.00pm</p>
+                        <p>Saturday 8.30am – 12.30pm</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="our-offices">
+      <div class="container-fluid">
+        <div class="inner">
+          <div class="head w-100">
+            <h2>OUR <span class="colored">OFFICES</span></h2>
+            <p class="sec-small">
+              Elite's offices are pretty spectacular if we do say so ourselves.
+              Located between the tranquil banks of the Yarra and the bustle of
+              urban life on Toorak Road lies our South Yarra headquarters.
+            </p>
+            <p class="sec-small">
+              In 2017, we opened a second office in EQ Tower to cater to our
+              international and city-based real estate clients. Our dynamic,
+              friendly spaces have a first-class lounge feeling, encompassing
+              interactive spaces for effective collaboration with a
+              cutting-edge, contemporary finish.
+            </p>
+          </div>
+          <div class="row location-card-wrapper gy-4">
+            <div class="col-md-6">
+              <div class="location-card">
+                <div class="img-wrapper">
+                <img class="w-100" src="assets/images/ellite-russell.jpg" alt="">
+                </div>
+                <div class="location-details">
+                  <h4>Elite On Russell Street</h4>
+                  <ul>
+                    <li><i class="fa-solid fa-location-dot"></i><a href="">268 Russell street, Melbourne vic 3000 Australia</a></li>
+                    <li><i class="fa-solid fa-envelope"></i><a href="">info@ereal.com.au</a></li>
+                    <li><i class="fa-solid fa-mobile-screen"></i><a href="">03 9663 9977</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="location-card">
+                <div class="img-wrapper">
+                <img class="w-100" src="assets/images/ellite-elazabit.jpg" alt="">
+                </div>
+                <div class="location-details">
+                  <h4>Elite On Elizabeth Street</h4>
+                  <ul>
+                    <li><i class="fa-solid fa-location-dot"></i><a href="">455 Elizabeth street, Melbourne vic 3000 Australia</a></li>
+                    <li><i class="fa-solid fa-envelope"></i><a href="">qinfo@ereal.com.au</a></li>
+                    <li><i class="fa-solid fa-mobile-screen"></i><a href="">03 9326 9977</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="location-card">
+                <div class="img-wrapper">
+                <img class="w-100" src="assets/images/ellite-spencer.jpg" alt="">
+                </div>
+                <div class="location-details">
+                  <h4>Elite On Spencer Street</h4>
+                  <ul>
+                    <li><i class="fa-solid fa-location-dot"></i><a href="">200 Spencer street, Melbourne vic 3000 Australia</a></li>
+                    <li><i class="fa-solid fa-envelope"></i><a href="">spencer@ereal.com.au</a></li>
+                    <li><i class="fa-solid fa-mobile-screen"></i><a href="">03 9642 2298</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="location-card">
+                <div class="img-wrapper">
+                <img class="w-100" src="assets/images/ellite-abecket.jpg" alt="">
+                </div>
+                <div class="location-details">
+                  <h4>Elite On A'Beckett Street</h4>
+                  <ul>
+                    <li><i class="fa-solid fa-location-dot"></i><a href="">228 A'Beckett St, Melbourne vic 3000 Australia</a></li>
+                    <li><i class="fa-solid fa-envelope"></i><a href="">ainfo@ereal.com.au</a></li>
+                    <li><i class="fa-solid fa-mobile-screen"></i><a href="">03 9088 6299</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="difference Switch-to-elite">
+      <div class="container-fluid">
+        <div class="inner">
+          <div class="testimonials text-center p-0 m-0">
+            <div class="head">
+              <h2>SWITCH</h2>
+              <h2>TO <span class="colored">ELITE</span></h2>
+            </div>
+            <p class="sec-small">
+              Switching to ELITE is easy. It’s free and the process is entirely
+              executed by us. We have the experience, knowledge, and resources
+              to swiftly transfer your property under ELITE management. Don’t
+              settle for second best, sign with ELITE today.
+            </p>
+          </div>
+          <div class="Switch">
+            <div class="video-custom">
+              <div class="play-pause">
+                <span class="play-btn" id="play_button"><i></i></span
+                ><span id="pause_button" class="pause-btn"><i></i></span>
+              </div>
+              <img
+                class="poster-img"
+                src="assets/images/maxresdefault.jpg"
+                alt="Model Popup"
+              />
+              <video id="video" width="100%" poster="" controls>
+                <source
+                  src="http://vimeo-hp-videos.global.ssl.fastly.net/3/3.mp4"
+                  data-wf-ignore="true"
+                />
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container-fluid">
+        <div class="inner">
+          <div class="footer-links row">
+            <div class="col-md-6">
+              <div class="logo-wrapper">
+                <a href=""
+                  ><div class="head d-flex">
+                    <h2>REAL DIALOGUE<br />REAL ADVICE</h2>
+                  </div></a
+                >
+                <form>
+                  <div
+                    class="mb-3 input-newsletter d-flex justify-content-between"
+                  >
+                    <input
+                      type="email"
+                      class="form-control email"
+                      id="exampleInputEmail1"
+                      aria-describedby="emailHelp"
+                      placeholder="Enter Your Email"
+                    />
+                    <a class="footer-cta"
+                      >Submit
+                      <i class="bx bx-arrow-back bx-rotate-180 fs-6 m-0"></i
+                    ></a>
+                  </div>
+                  <select class="form-select">
+                    <option selected>About you</option>
+                    <option>Looking to Rent - Renter</option>
+                    <option>Rent out my property - Owner</option>
+                    <option>Looking to Sell</option>
+                    <option>Looking to Buy</option>
+                    <option>Current Elite Renter</option>
+                    <option>Current Elite Owner</option>
+                  </select>
+                </form>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="footer-nav">
+                <ul class="menu">
+                  <li>
+                    <a href="">Rent</a>
+                  </li>
+                  <li>
+                    <a href="">Buy</a>
+                  </li>
+                  <li>
+                    <a href="">Manage</a>
+                  </li>
+                  <li>
+                    <a href="">Places Guides</a>
+                  </li>
+                  <li>
+                    <a href="">About Elite</a>
+                  </li>
+                  <li>
+                    <a href="">News</a>
+                  </li>
+                  <li>
+                    <a href="">Careers at Elite</a>
+                  </li>
+                  <li>
+                    <a href="">Contact</a>
+                  </li>
+                </ul>
+
+                <ul class="menu second">
+                  <li>
+                    <a target="_blank" href="">Owner’s Portal</a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="">Youtube</a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="">LinkedIn</a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="">Facebook</a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="">Instagram</a>
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://mp.weixin.qq.com/s/zyzsY0sqVwF1sJa8WVXyBQ"
+                      >WeChat</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyrights row">
+            <div class="col-lg-6">
+              <div class="address-wrapper text-center text-lg-start">
+                <div class="logo">
+                  <a href="" class="d-block" style="max-width: 95px"
+                    ><img
+                      class="w-100"
+                      src="assets/images/White-shadow-logo.svg"
+                      alt=""
+                  /></a>
+                </div>
+                <div class="address">
+                  <a href="" class="d-flex flex-column align-items-start"
+                    ><span>268 Russell street,</span>
+                    <span>Melbourne VIC 3000,</span>
+                    <span>Australia</span>
+                    <span>03 9663 9977</span></a
+                  >
+                  <a href="" class="d-flex flex-column align-items-start"
+                    ><span>455 Elizabeth street,</span>
+                    <span>Melbourne, VIC 3000</span>
+                    <span>Australia</span>
+                    <span>03 9326 9977</span></a
+                  >
+                  <a href="" class="d-flex flex-column align-items-start"
+                    ><span>200 Spencer street,</span>
+                    <span>Melbourne, VIC 3000</span>
+                    <span>Australia</span>
+                    <span>03 9642 2298</span></a
+                  >
+                  <a href="" class="d-flex flex-column align-items-start"
+                    ><span>228 A'Beckett street,</span>
+                    <span>Melbourne, VIC 3000</span>
+                    <span>Australia</span>
+                    <span>03 9088 6299</span></a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="footer-nav">
+                <ul class="menu">
+                  <li>
+                    <a href="">Privacy Policy </a>
+                  </li>
+                  <li>
+                    <a href="">Term & Conditions</a>
+                  </li>
+                </ul>
+
+                <ul class="menu second">
+                  <li>
+                    <a target="_blank" href="">© Elite 2023</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+    <script>
+      /*Video*/
+      let playButton = document.getElementById("play_button");
+      let pauseButton = document.getElementById("pause_button");
+      playButton.addEventListener("click", function () {
+        video.play();
+        playButton.classList.add("vplay");
+        pauseButton.classList.remove("vpause");
+        document.querySelector("html").classList.add("playvideo");
+      });
+
+      pauseButton.addEventListener("click", function () {
+        video.pause();
+        playButton.classList.remove("vplay");
+        pauseButton.classList.add("vpause");
+        document.querySelector("html").classList.remove("playvideo");
+      });
+      //Video Play Pause Control End
+      //Video Sound on & off Ctrl Start
+      let soundOff = document.getElementById("sound-off");
+      let soundOn = document.getElementById("sound-on");
+      let soundCtrl = document.querySelector(".sound-ctrl");
+
+      soundOff.addEventListener("click", function () {
+        video.muted = true;
+        soundCtrl.classList.add("soundctrlshow");
+      });
+
+      soundOn.addEventListener("click", function () {
+        video.muted = false;
+        soundCtrl.classList.remove("soundctrlshow");
+      });
+      //Video Sound on & off Ctrl End
+      video.onended = function () {
+        document.querySelector("html").classList.remove("playvideo");
+        playButton.classList.remove("vplay");
+      };
+      /*Video*/
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/dist/boxicons.js"
+      integrity="sha512-Dm5UxqUSgNd93XG7eseoOrScyM1BVs65GrwmavP0D0DujOA8mjiBfyj71wmI2VQZKnnZQsSWWsxDKNiQIqk8sQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      $(".slider-listing").slick({
+        dots: false,
+        arrows: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+      });
+
+      $(".testimonial-slider").slick({
+        dots: true,
+        arrows: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+      });
+
+      $(".people-slider").slick({
+        dots: false,
+        arrows: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 6,
+        adaptiveHeight: true,
+        responsive: [
+          {
+            breakpoint: 1199,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 840,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 650,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: false,
+            },
+          },
+        ],
+      });
+
+      $(".wide-sliders").slick({
+        dots: false,
+        arrows: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 4,
+        adaptiveHeight: true,
+        responsive: [
+          {
+            breakpoint: 1199,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 970,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 660,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: false,
+            },
+          },
+        ],
+      });
+    </script>
+  </body>
+</html>

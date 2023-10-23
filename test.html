@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lightbox Gallery with S1 and Slick Slider</title>
+    
+    <!-- Include Slick Slider CSS and JS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
+    <!-- Include S1 Lightbox Gallery CSS and JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/s1-gallery@0.2.0/dist/s1-gallery.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/s1-gallery@0.2.0/dist/s1-gallery.min.js"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css"
+    integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/dist/boxicons.js"
+      integrity="sha512-Dm5UxqUSgNd93XG7eseoOrScyM1BVs65GrwmavP0D0DujOA8mjiBfyj71wmI2VQZKnnZQsSWWsxDKNiQIqk8sQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    
+    <!-- Your custom CSS -->
+    <style>
+        /* Add your custom CSS here */
+        .gallery-slider .slider__slide {
+          max-width: 670px;
+            width: 100%;
+          position: relative;
+          overflow: hidden;
+          margin: 0 15px;
+          transition: all 0.2s ease-in-out;
+          opacity: 0.2;
+          position: relative;
+        }
+        .gallery-slider .slider__slide.slick-current {
+            opacity: 1;
+        }
+        .gallery-slider .slider__slide img   {
+            max-width: 670px;
+            max-height: 670px;
+            height: auto;
+            width: 100%;
+        }
+        /* CSS for the slide counter */
+        .gallery-slider .slider-counter {
+            text-align: center;
+        }
+
+        .gallery-slider .current-slide {
+            font-weight: bold;
+        }
+
+        .gallery-slider .total-slides {
+            font-weight: normal;
+        }
+        .gallery-slider .bottom-controls {
+            max-width: 670px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 5px 0 5px ;
+        }
+        .gallery-slider .navigation-arrows {
+            gap: 10px;
+        }
+        .gallery-slider .navigation-arrows box-icon {
+            height: 20px;
+        }
+        .gallery-slider .navigation-arrows {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+        .gallery-slider .lightbox-trigger i {
+            font-size: 18px;
+            color: #000;
+            line-height: 1px;
+        }
+        .gallery-slider .lightbox-trigger {
+            padding: 10px 4px;
+            background-color: #fff;
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            justify-content: center;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+        body:has(.gallery-slider) .lg-backdrop.in {
+            opacity: 0.3;
+        }
+        #lg-counter ,.lg-toolbar .lg-icon {
+            color: #fff;
+        }
+        @media screen and (max-width: 700px) {
+            .gallery-slider .slider__slide {
+                margin: 0;
+            }
+            .gallery-slider .bottom-controls {
+                padding: 10px 20px 0 20px;
+                max-width: 100%;
+                width: auto;
+            }
+            .gallery-slider .bottom-controls box-icon {
+                height: 18px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="gallery-slider">
+    <div class="slider">
+        <div class="slider__slide">
+            <a href="assets/images/gallery/gallery.jpg" class="s1-lightbox lightbox-trigger" data-caption="Image-1">
+            <i class='bx bx-plus'></i></a>
+                <img class="w-100" src="assets/images/gallery/gallery.jpg" alt="Image-1">
+        </div>
+        <div class="slider__slide">
+            <a href="assets/images/gallery/gallery1.jpg" class="s1-lightbox lightbox-trigger" data-caption="Image-2">
+            <i class='bx bx-plus'></i></a>
+                <img class="w-100" src="assets/images/gallery/gallery1.jpg" alt="Image-2">
+        </div>
+        <div class="slider__slide">
+            <a href="assets/images/gallery/gallery2.jpg" class="s1-lightbox lightbox-trigger" data-caption="Image-3">
+            <i class='bx bx-plus'></i></a>
+                <img class="w-100" src="assets/images/gallery/gallery2.jpg" alt="Image-3">
+        </div>
+        <div class="slider__slide">
+            <a href="assets/images/gallery/gallery3.jpg" class="s1-lightbox lightbox-trigger" data-caption="Image-4">
+            <i class='bx bx-plus'></i></a>
+                <img class="w-100" src="assets/images/gallery/gallery3.jpg" alt="Image-4">
+        </div>
+        <div class="slider__slide">
+            <a href="assets/images/gallery/gallery4.jpg" class="s1-lightbox lightbox-trigger" data-caption="Image-5">
+            <i class='bx bx-plus'></i></a>
+                <img class="w-100" src="assets/images/gallery/gallery4.jpg" alt="Image-5">
+        </div>
+        <!-- Add more slides with images -->
+    </div>
+    <div class="bottom-controls">
+        
+        <div class="slider-counter">
+            <span class="current-slide">3</span> / <span class="total-slides">2</span>
+        </div>
+        <div class="paginator-center text-color text-center">
+            <ul class="navigation-arrows">
+                <li class="prev"><box-icon name='arrow-back'></box-icon></li>
+                <li class="next"><box-icon name='arrow-back' rotate='180' ></box-icon></li>
+            </ul>
+        </div>
+    </div>
+    
+</div>
+    
+    <!-- Initialize Slick Slider -->
+    
+    <script>
+        
+        $(document).ready(function () {
+        var slider = $('.slider');
+
+        // Initialize the Slick Slider
+        slider.slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: true,
+		    variableWidth: true,
+            prevArrow: $('.prev'),
+            nextArrow: $('.next'),
+            responsive: [
+                {
+                breakpoint: 700,
+                settings: {
+                    variableWidth: false,
+                    centerMode: false,
+                }
+                }
+            ]
+
+        });
+
+        // Function to update the slide counter
+        function updateSlideCounter(current, total) {
+            $('.current-slide').text(current);
+            $('.total-slides').text(total);
+        }
+
+        // Initialize the slide counter
+        updateSlideCounter(1, slider.slick('getSlick').slideCount);
+
+        // Add an event listener to update the slide counter when the slide changes
+        slider.on('afterChange', function (event, slick, currentSlide) {
+            updateSlideCounter(currentSlide + 1, slick.slideCount);
+        });
+    });
+
+        $('.slider').lightGallery({
+    selector: '.slider a',
+    download: false, // Optional: Disable download button
+    thumbnail: true, // Optional: Show thumbnails in the lightbox
+    share: false, // Optional: Disable share button
+});
+    </script>
+</body>
+</html>

@@ -13,10 +13,15 @@ window.addEventListener('scroll', function() {
 
 });
 
-var el = document.querySelector('#map-filter');
-var listing = document.querySelector('#map-toggle');
-el.addEventListener('onclick', function() {
-    listing.classList.toggle('active');
-  });
 
+
+document.addEventListener('DOMContentLoaded', function () {
+var para = document.getElementById('readmorepara');
+var readmore = document.getElementById('readmore');
+readmore.addEventListener('click', function() {
+    para.classList.toggle('active');
+});
+});
+
+       
 

@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WIPOV</title>
+    <link rel="stylesheet" href="assets/css/Style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+      integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css"
+      integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Include S1 Lightbox Gallery CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/s1-gallery@0.2.0/dist/s1-gallery.min.css"
+    />
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="container-fluid">
+        <div class="inner justify-content-between">
+          <!-- toggler -->
+          <div class="brand-logo">
+            <a href="index.html"><img src="" alt="" /></a>
+          </div>
+          <div class="navmenus">
+            <nav>
+              <ul class="Navitems d-none d-lg-flex">
+                <li><a href="Rent.html">Rent</a></li>
+                <li><a href="Buy.html">Buy</a></li>
+                <li><a href="Sell.html">Sell</a></li>
+                <li><a href="property-management.html">Short Stay</a></li>
+                <li><a href="property-management.html">Property Management</a></li>
+                <li><a href="">Building Info</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <button
+            class="btn canvas-toggler float-start"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvas"
+            role="button"
+          >
+            <i
+              class="fa-solid fa-bars"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvas"
+            ></i>
+          </button>
+
+          <!-- <div class="nav-actions d-none d-lg-flex">
+            <a href="">Language</a>
+            <div class="header-search d-flex align-items-center">
+              <input type="search" class="search-input" placeholder="Search" />
+              <a class="search-toggler"><i class="fas fa-search"></i></a>
+            </div>
+            <a href=""><i class="fa-regular fa-user"></i></a>
+          </div> -->
+          <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvas"
+            data-bs-keyboard="false"
+            data-bs-backdrop="false"
+          >
+            <div class="offcanvas-body px-0">
+              <ul
+                class="Mainsidenav nav flex-column mb-sm-auto mb-0 align-items-start"
+                id="menu"
+              >
+                <li class="nav-item">
+                  <button
+                    type="button"
+                    class="btn-close text-reset"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </li>
+                <li class="nav-item">
+                  <a href="Rent.html" class="nav-link text-truncate">
+                    <span class="d-sm-inline">Rent</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-truncate dropdown-anchor"
+                    data-bs-toggle="collapse"
+                    href="#Buy"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="Buy"
+                    ><i class="fa-solid fa-angle-down fs-6 me-2"></i>Buy
+                  </a>
+                  <div class="collapse" id="Buy">
+                    <div class="card-body">
+                      <a href="">Residential</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a href="Sell.html" class="nav-link text-truncate">
+                    <span class="d-sm-inline">Sell</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-truncate dropdown-anchor"
+                    data-bs-toggle="collapse"
+                    href="#Mannage"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="Mannage"
+                    ><i class="fa-solid fa-angle-down fs-6 me-2"></i>Mannagement
+                  </a>
+                  <div class="collapse" id="Mannage">
+                    <div class="card-body">
+                      <a href="">Residential</a>
+                      <a href="">Build to Rent</a>
+                      <a href="">Commercial</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link text-truncate">
+                    <span class="d-sm-inline">Projects</span>
+                  </a>
+                </li>
+              </ul>
+              <ul
+                class="Secondarysidenav nav nav-pills flex-column mb-sm-auto mb-0 align-items-start"
+                id="menu"
+              >
+                <li class="nav-item">
+                  <a href="#" class="nav-link text-truncate">
+                    <span class="d-sm-inline">About Elite</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-truncate dropdown-anchor"
+                    data-bs-toggle="collapse"
+                    href="#Realpeople"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="Realpeople"
+                    ><i class="fa-solid fa-angle-down fs-6 me-2"></i>Real people
+                  </a>
+                  <div class="collapse" id="Realpeople">
+                    <div class="card-body">
+                      <a href="">Our Team</a>
+                      <a href="">Become a Liveability Expert</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link text-truncate">
+                    <span class="d-sm-inline">Place Guides</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-truncate dropdown-anchor"
+                    data-bs-toggle="collapse"
+                    href="#HandBook"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="HandBook"
+                    ><i class="fa-solid fa-angle-down fs-6 me-2"></i>Home
+                    HandBook
+                  </a>
+                  <div class="collapse" id="HandBook">
+                    <div class="card-body">
+                      <a href="">Home HandBook</a>
+                      <a href="">Prospective Renters</a>
+                      <a href="">Building Information</a>
+                      <a href="">Maintenance</a>
+                      <a href="">Maintenance Tips</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-truncate dropdown-anchor"
+                    data-bs-toggle="collapse"
+                    href="#ProjectMarketing"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="ProjectMarketing"
+                    ><i class="fa-solid fa-angle-down fs-6 me-2"></i>Project
+                    Marketing
+                  </a>
+                  <div class="collapse" id="ProjectMarketing">
+                    <div class="card-body">
+                      <a href="">Real Service</a>
+                      <a href="">Real Success</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link text-truncate">
+                    <span class="d-sm-inline">StudioElite</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link text-truncate">
+                    <span class="d-sm-inline">News</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link text-truncate">
+                    <span class="d-sm-inline">Contact</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="breadcrumbs">
+        <div class="inner">
+          <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item">Rent</li>
+              <li class="breadcrumb-item active" aria-current="page">
+                4/68 Finch Street
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="Listing-gallery">
+      <div class="container-fluid">
+        <div class="inner">
+          <div class="gallery-slider">
+            <div class="slider">
+              <div class="slider__slide">
+                <a
+                  href="assets/images/gallery/gallery.jpg"
+                  class="s1-lightbox lightbox-trigger"
+                  data-caption="Image-1"
+                >
+                  <i class="bx bx-plus"></i
+                ></a>
+                <img
+                  class="w-100"
+                  src="assets/images/gallery/gallery.jpg"
+                  alt="Image-1"
+                />
+              </div>
+              <div class="slider__slide">
+                <a
+                  href="assets/images/gallery/gallery1.jpg"
+                  class="s1-lightbox lightbox-trigger"
+                  data-caption="Image-2"
+                >
+                  <i class="bx bx-plus"></i
+                ></a>
+                <img
+                  class="w-100"
+                  src="assets/images/gallery/gallery1.jpg"
+                  alt="Image-2"
+                />
+              </div>
+              <div class="slider__slide">
+                <a
+                  href="assets/images/gallery/gallery2.jpg"
+                  class="s1-lightbox lightbox-trigger"
+                  data-caption="Image-3"
+                >
+                  <i class="bx bx-plus"></i
+                ></a>
+                <img
+                  class="w-100"
+                  src="assets/images/gallery/gallery2.jpg"
+                  alt="Image-3"
+                />
+              </div>
+              <div class="slider__slide">
+                <a
+                  href="assets/images/gallery/gallery3.jpg"
+                  class="s1-lightbox lightbox-trigger"
+                  data-caption="Image-4"
+                >
+                  <i class="bx bx-plus"></i
+                ></a>
+                <img
+                  class="w-100"
+                  src="assets/images/gallery/gallery3.jpg"
+                  alt="Image-4"
+                />
+              </div>
+              <div class="slider__slide">
+                <a
+                  href="assets/images/gallery/gallery4.jpg"
+                  class="s1-lightbox lightbox-trigger"
+                  data-caption="Image-5"
+                >
+                  <i class="bx bx-plus"></i
+                ></a>
+                <img
+                  class="w-100"
+                  src="assets/images/gallery/gallery4.jpg"
+                  alt="Image-5"
+                />
+              </div>
+              <!-- Add more slides with images -->
+            </div>
+            <div class="bottom-controls">
+              <div class="slider-counter">
+                <span class="current-slide">3</span> /
+                <span class="total-slides">2</span>
+              </div>
+              <div class="paginator-center text-color text-center">
+                <ul class="navigation-arrows">
+                  <li class="prev"><box-icon name="arrow-back"></box-icon></li>
+                  <li class="next">
+                    <box-icon name="arrow-back" rotate="180"></box-icon>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="listing-detail-page">
+      <div class="container">
+        <div class="inner">
+          <div class="listing-details">
+            <h3>3402/245 City Road, Southbank, VIC 3006</h3>
+            <p class="pricing">$625 per week</p>
+            <ul class="listing-numbers d-flex gap-3">
+              <li>
+                <span><i class="bx bx-bed"></i>2</span>
+              </li>
+              <li>
+                <span><i class="bx bx-bath"></i>2</span>
+              </li>
+              <li>
+                <span><i class="bx bxs-car-garage"></i>1</span>
+              </li>
+            </ul>
+            <div class="details-content">
+              <h4>Neatly renovated in delightful location</h4>
+              <p id="readmorepara">
+                Recently refurbished, this sundrenched apartment is ready to go.
+                Located in East Malvern's finest street with Parks, transport,
+                cafes and shopping all just a short stroll this apartment will
+                not last.<br /><br />
+                Situated on the first floor, this apartment features a spacious
+                air-conditioned living area with polished floorboards and
+                adjoining balcony, two large bedrooms with BIR's, a spacious
+                kitchen with stone bench tops, stainless steel appliances
+                including gas cooktop and dishwasher, and a sparkling bathroom
+                with laundry facilities. An off street car park completes the
+                picture.<br /><br />
+                Booking an inspection is easy! Simply click on "Request a Time"
+                to register your details for an inspection time that suits
+                you.<br /><br />Alternatively, "Get in Touch" with our
+                Liveability Agents to enquire today, we look forward to meeting
+                you soon! By registering, you will be instantly informed of any
+                updates, changes, or cancellations to your appointment.<br /><br />
+                Applications are processed after inspections have been
+                completed. A link to apply will be provided at the inspection.
+              </p>
+              <span id="readmore">Read more</span>
+            </div>
+            <div class="accordion locations-accordian" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    Available Date
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <div class="timings">
+                      <p>November 16</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="btn-actions">
+            <button type="submit" class="btn btn-action">Apply</button>
+            <button type="submit" class="btn btn-action">Book an inspection</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-listing">
+      <div class="container-fluid">
+        <div class="inner">
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79041.45211574933!2d-1.32998883345529!3d51.75049376998144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48713380adc41faf%3A0xc820dba8cb547402!2sOxford%2C%20UK!5e0!3m2!1sen!2s!4v1697635129026!5m2!1sen!2s"
+              width="800"
+              height="700"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="request-form">
+      <div class="container-fluid">
+        <div class="inner">
+          <div class="head">
+            <h2><span class="colored">ENQUIRE ABOUT THIS</span> PROPERTY</h2>
+          </div>
+          <form class="form-req">
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="First Name*"
+            />
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Last Name*"
+            />
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Phone*"
+            />
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Email*"
+            />
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+              placeholder="Message"
+            />
+            <div
+              id="field_3_13"
+              class="gfield gfield--type-html gfield--width-full gfield_html gfield_html_formatted gfield_no_follows_desc field_sublabel_below gfield--no-description field_description_below gfield_visibility_visible"
+              data-js-reload="field_3_13"
+            >
+              <p style="margin-top: 20px; color: #808080">
+                powered by
+                <a href="https://inspectrealestate.com.au" target="_blank"
+                  ><span style="color: #808080; font-weight: bold">inspect</span
+                  ><span style="color: #808080; font-weight: bold"
+                    >realestate.com.au</span
+                  ></a
+                >
+              </p>
+              <p style="color: #808080">
+                This real estate agency uses the software of InspectRealEstate
+                (IRE) to collect this information. Both organisations use and
+                disclose the information to provide property-seeking related
+                services to you and third parties. IRE uses facilities that may
+                store the information overseas. For further information and
+                IRE's contact details, read the
+                <a
+                  href="https://app.inspectrealestate.com.au/Legal.aspx?r=t"
+                  target="_blank"
+                  >IRE Privacy Policy</a
+                >. The real estate agency may deal with information in ways not
+                covered by IRE's privacy policy. Check the real estate agency's
+                website for its privacy policy. By submitting your details with
+                this form, you consent to the collection, use and disclosure of
+                your personal information in accordance with this statement and
+                the
+                <a
+                  href="https://app.inspectrealestate.com.au/Legal.aspx?r=t"
+                  target="_blank"
+                  >IRE Privacy Policy</a
+                >.
+              </p>
+            </div>
+            <button type="submit" class="btn btn-form">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-listing pt-5" id="map-toggle">
+      <div class="container-fluid">
+        <div class="inner">
+          <div
+            class="head d-flex w-100 justify-content-between align-items-center"
+          >
+            <h2>SIMILAR<span class="colored"> PROPERTIES</span> FOR RENT</h2>
+          </div>
+          <div class="listings">
+            <div class="row mt-md-5 mt-3">
+              <div class="col-md-3 col-sm-6">
+                <div class="listing">
+                  <div class="slider-listing">
+                    <div>
+                      <img src="assets/images/slider1.jpg" alt="" />
+                    </div>
+                  </div>
+                  <div class="listing-details">
+                    <p>3402/245 City Road, Southbank, VIC 3006</p>
+                    <ul class="listing-numbers d-flex gap-3">
+                      <li>
+                        <span><i class="bx bx-bed fs-5"></i>2</span>
+                      </li>
+                      <li>
+                        <span><i class="bx bx-bath fs-5"></i>2</span>
+                      </li>
+                      <li>
+                        <span><i class="bx bxs-car-garage fs-5"></i>1</span>
+                      </li>
+                    </ul>
+                    <div class="pricing-wrapper">
+                      <p>$660,000 - $680,000</p>
+                      <a href=" " class="d-block w-100"
+                        ><div>
+                          <span>Book inspection</span
+                          ><i
+                            class="bx bx-arrow-back bx-rotate-180 fs-5"
+                          ></i></div
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="listing">
+                  <div class="slider-listing">
+                    <div>
+                      <img src="assets/images/slider2.jpg" alt="" />
+                    </div>
+                  </div>
+                  <div class="listing-details">
+                    <p>3402/245 City Road, Southbank, VIC 3006</p>
+                    <ul class="listing-numbers d-flex gap-3">
+                      <li>
+                        <span><i class="bx bx-bed fs-5"></i>2</span>
+                      </li>
+                      <li>
+                        <span><i class="bx bx-bath fs-5"></i>2</span>
+                      </li>
+                      <li>
+                        <span><i class="bx bxs-car-garage fs-5"></i>1</span>
+                      </li>
+                    </ul>
+                    <div class="pricing-wrapper">
+                      <p>$660,000 - $680,000</p>
+                      <a href=" " class="d-block w-100"
+                        ><div>
+                          <span>Book inspection</span
+                          ><i
+                            class="bx bx-arrow-back bx-rotate-180 fs-5"
+                          ></i></div
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="listing">
+                  <div class="slider-listing">
+                    <div>
+                      <img src="assets/images/slider3.jpg" alt="" />
+                    </div>
+                  </div>
+                  <div class="listing-details">
+                    <p>3402/245 City Road, Southbank, VIC 3006</p>
+                    <ul class="listing-numbers d-flex gap-3">
+                      <li>
+                        <span><i class="bx bx-bed fs-5"></i>2</span>
+                      </li>
+                      <li>
+                        <span><i class="bx bx-bath fs-5"></i>2</span>
+                      </li>
+                      <li>
+                        <span><i class="bx bxs-car-garage fs-5"></i>1</span>
+                      </li>
+                    </ul>
+                    <div class="pricing-wrapper">
+                      <p>$660,000 - $680,000</p>
+                      <a href=" " class="d-block w-100"
+                        ><div>
+                          <span>Book inspection</span
+                          ><i
+                            class="bx bx-arrow-back bx-rotate-180 fs-5"
+                          ></i></div
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container-fluid">
+        <div class="inner">
+          <!-- <div class="footer-links row">
+            <div class="col-md-6">
+              <div class="logo-wrapper">
+                <a href=""
+                  ><div class="head d-flex">
+                    <h2>REAL DIALOGUE<br />REAL ADVICE</h2>
+                  </div></a
+                >
+                <form>
+                  <div
+                    class="mb-3 input-newsletter d-flex justify-content-between"
+                  >
+                    <input
+                      type="email"
+                      class="form-control email"
+                      id="exampleInputEmail1"
+                      aria-describedby="emailHelp"
+                      placeholder="Enter Your Email"
+                    />
+                    <a class="footer-cta"
+                      >Submit
+                      <i class="bx bx-arrow-back bx-rotate-180 fs-6 m-0"></i
+                    ></a>
+                  </div>
+                  <select class="form-select">
+                    <option selected>About you</option>
+                    <option>Looking to Rent - Renter</option>
+                    <option>Rent out my property - Owner</option>
+                    <option>Looking to Sell</option>
+                    <option>Looking to Buy</option>
+                    <option>Current Elite Renter</option>
+                    <option>Current Elite Owner</option>
+                  </select>
+                </form>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="footer-nav">
+                <ul class="menu">
+                  <li>
+                    <a href="">Rent</a>
+                  </li>
+                  <li>
+                    <a href="">Buy</a>
+                  </li>
+                  <li>
+                    <a href="">Manage</a>
+                  </li>
+                  <li>
+                    <a href="">Places Guides</a>
+                  </li>
+                  <li>
+                    <a href="">About Elite</a>
+                  </li>
+                  <li>
+                    <a href="">News</a>
+                  </li>
+                  <li>
+                    <a href="">Careers at Elite</a>
+                  </li>
+                  <li>
+                    <a href="">Contact</a>
+                  </li>
+                </ul>
+
+                <ul class="menu second">
+                  <li>
+                    <a target="_blank" href="">Owner’s Portal</a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="">Youtube</a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="">LinkedIn</a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="">Facebook</a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="">Instagram</a>
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://mp.weixin.qq.com/s/zyzsY0sqVwF1sJa8WVXyBQ"
+                      >WeChat</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div> -->
+          <div class="footer-copyrights row">
+            <div class="logo">
+              <a href="" class="d-block" style="max-width: 95px"
+                ><img
+                  class="w-100"
+                  src="assets/images/White-shadow-logo.svg"
+                  alt=""
+              /></a>
+            </div>
+            <div class="col-md-10">
+              <div class="address-wrapper text-center text-lg-start">
+                <div class="address">
+                  <a href="" class="d-flex flex-column align-items-start"
+                    ><span>268 Russell street,</span>
+                    <span>Melbourne VIC 3000,</span>
+                    <span>Australia</span>
+                    <span>03 9663 9977</span></a
+                  >
+                  <a href="" class="d-flex flex-column align-items-start"
+                    ><span>455 Elizabeth street,</span>
+                    <span>Melbourne, VIC 3000</span>
+                    <span>Australia</span>
+                    <span>03 9326 9977</span></a
+                  >
+                  <a href="" class="d-flex flex-column align-items-start"
+                    ><span>200 Spencer street,</span>
+                    <span>Melbourne, VIC 3000</span>
+                    <span>Australia</span>
+                    <span>03 9642 2298</span></a
+                  >
+                  <a href="" class="d-flex flex-column align-items-start"
+                    ><span>228 A'Beckett street,</span>
+                    <span>Melbourne, VIC 3000</span>
+                    <span>Australia</span>
+                    <span>03 9088 6299</span></a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="footer-nav social">
+                  <p>Social Media:</p>
+                <ul class="menu second flex-row">
+                  <li>
+                    <a target="_blank" href=""><i class="fa-brands fa-facebook"></i></a>
+                  </li>
+                  <li>
+                    <a target="_blank" href=""><i class="fa-brands fa-instagram"></i></a>
+                  </li>
+                  <li>
+                    <a target="_blank" href=""><i class="fa-brands fa-square-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a target="_blank" href=""><i class="fa-brands fa-youtube"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-nav privacy">
+            <ul class="menu">
+              <li>
+                <a href="">Privacy Policy </a>
+              </li>
+              <li>
+                <a href="">Term & Conditions</a>
+              </li>
+            </ul>
+            <ul class="menu second">
+              <li>
+                <a target="_blank" href="">© Elite 2023</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+
+    <!-- Include S1 Lightbox Gallery JS -->
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/s1-gallery@0.2.0/dist/s1-gallery.min.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/dist/boxicons.js"
+      integrity="sha512-Dm5UxqUSgNd93XG7eseoOrScyM1BVs65GrwmavP0D0DujOA8mjiBfyj71wmI2VQZKnnZQsSWWsxDKNiQIqk8sQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(".slider-listing").slick({
+        dots: false,
+        arrows: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+      });
+
+      $(".testimonial-slider").slick({
+        dots: true,
+        arrows: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+      });
+
+      $(".people-slider").slick({
+        dots: false,
+        arrows: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 6,
+        adaptiveHeight: true,
+        responsive: [
+          {
+            breakpoint: 1199,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 840,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 650,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: false,
+            },
+          },
+        ],
+      });
+
+      $(".wide-sliders").slick({
+        dots: false,
+        arrows: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 4,
+        adaptiveHeight: true,
+        responsive: [
+          {
+            breakpoint: 1199,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 970,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 660,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: false,
+            },
+          },
+        ],
+      });
+
+      /*Gallery SLider*/
+      $(document).ready(function () {
+        var slider = $(".slider");
+
+        // Initialize the Slick Slider
+        slider.slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true,
+          variableWidth: true,
+          prevArrow: $(".prev"),
+          nextArrow: $(".next"),
+          responsive: [
+            {
+              breakpoint: 700,
+              settings: {
+                variableWidth: false,
+                centerMode: false,
+              },
+            },
+          ],
+        });
+
+        // Function to update the slide counter
+        function updateSlideCounter(current, total) {
+          $(".current-slide").text(current);
+          $(".total-slides").text(total);
+        }
+
+        // Initialize the slide counter
+        updateSlideCounter(1, slider.slick("getSlick").slideCount);
+
+        // Add an event listener to update the slide counter when the slide changes
+        slider.on("afterChange", function (event, slick, currentSlide) {
+          updateSlideCounter(currentSlide + 1, slick.slideCount);
+        });
+      });
+
+      $(".slider").lightGallery({
+        selector: ".slider a",
+        download: false, // Optional: Disable download button
+        thumbnail: true, // Optional: Show thumbnails in the lightbox
+        share: false, // Optional: Disable share button
+      });
+    </script>
+
+  </body>
+</html>

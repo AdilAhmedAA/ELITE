@@ -27,7 +27,13 @@
     box-sizing: border-box;
     font-family: 'gothamregular', monospace;
  }
+ body {
+   background-color: #fff !important;
+ }
 
+ body:has(.offcanvas.show) {
+   padding-right: 0 !important;
+ }
  body, a, p, h1, h2, h3, h4, h5, h6 {
     padding: 0;
     margin: 0;
@@ -91,10 +97,6 @@ body ul {
  }
 header .navmenus{
    display: block;
-   width: 100%;
-}header .navmenus nav {
-   display: grid;
-   grid-template-columns: 3fr 5fr 4fr;
    width: 100%;
 }
  header .inner .Navitems{
@@ -728,11 +730,11 @@ footer .footer-copyrights {
    border-top: 1px solid #fff;
 }
 footer .footer-copyrights .address {
-   margin-top: 60px;
+   margin-top: 20px;
+   margin-bottom: 30px;
    display: flex;
    align-items: center;
    justify-content: space-between;
-   max-width: 445px;
    flex-wrap: wrap;
    row-gap: 20px;
 }
@@ -955,6 +957,17 @@ header:has(.breadcrumbs) {
    background-color: #fff;
    top: 0;
 }
+header:has(.breadcrumbs.rent-sell) {
+   background-color: transparent;
+}
+header:has(.breadcrumbs.rent-sell).scrolled {
+   background-color: #fff;
+}
+header:has(.breadcrumbs.rent-sell).scrolled .breadcrumbs {
+   background-color: #fff;
+}
+
+
 header:has(.breadcrumbs) .breadcrumbs ol {
   margin: 0;
 }
@@ -981,6 +994,10 @@ header:has(.breadcrumbs).scrolled {
    background-repeat: no-repeat;
    background-size: cover;
    position: relative;
+}
+.hero-page.rent-sell {
+   margin-top: 0;
+   padding-top: 110px;
 }
 .hero-page .overlay {
    position: absolute;
@@ -1708,3 +1725,323 @@ body nav a:hover {
       line-height: 22px;
    }
 }
+
+
+/**listing page**/
+
+/* Add your custom CSS here */
+.gallery-slider .slider__slide {
+   max-width: 670px;
+     width: 100%;
+   position: relative;
+   overflow: hidden;
+   margin: 0 15px;
+   transition: all 0.2s ease-in-out;
+   opacity: 0.2;
+   position: relative;
+ }
+ .gallery-slider .slider__slide.slick-current {
+     opacity: 1;
+ }
+ .gallery-slider .slider__slide img   {
+     max-width: 670px;
+     max-height: 670px;
+     height: auto;
+     width: 100%;
+ }
+ /* CSS for the slide counter */
+ .gallery-slider .slider-counter {
+     text-align: center;
+ }
+
+ .gallery-slider .current-slide {
+     font-weight: bold;
+ }
+
+ .gallery-slider .total-slides {
+     font-weight: normal;
+ }
+ .gallery-slider .bottom-controls {
+     max-width: 670px;
+     width: 100%;
+     margin: 0 auto;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 10px 5px 0 5px ;
+ }
+ .gallery-slider .navigation-arrows {
+     gap: 10px;
+ }
+ .gallery-slider .navigation-arrows box-icon {
+     height: 20px;
+ }
+ .gallery-slider .navigation-arrows {
+     list-style: none;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 0;
+     margin: 0;
+ }
+ .gallery-slider .lightbox-trigger i {
+     font-size: 18px;
+     color: #000;
+     line-height: 1px;
+ }
+ .gallery-slider .lightbox-trigger {
+     padding: 10px 4px;
+     background-color: #fff;
+     display: inline-flex;
+     align-items: center;
+     text-decoration: none;
+     justify-content: center;
+     position: absolute;
+     bottom: 10px;
+     right: 10px;
+ }
+ body:has(.gallery-slider) .lg-backdrop.in {
+     opacity: 0.3;
+ }
+ #lg-counter ,.lg-toolbar .lg-icon {
+     color: #fff;
+ }
+ @media screen and (max-width: 700px) {
+     .gallery-slider .slider__slide {
+         margin: 0;
+     }
+     .gallery-slider .bottom-controls {
+         padding: 10px 20px 0 20px;
+         max-width: 100%;
+         width: auto;
+     }
+     .gallery-slider .bottom-controls box-icon {
+         height: 18px;
+     }
+ }
+
+
+ .listing-detail-page .inner{
+   max-width: 670px;
+   width: 100%;
+   margin: 0 auto;
+   padding-top: 15px;
+ }
+ .listing-detail-page .inner h3 {
+   font-weight: 700;
+   font-size: 26px;
+   line-height: 32px;
+   padding-bottom: 5px;
+   border-bottom: 1px solid #666;
+}
+
+.listing-detail-page .inner .pricing {
+   font-size: 14px;
+   line-height: 20px;
+   padding-bottom: 5px;
+   margin-bottom: 8px;
+   border-bottom: 1px solid #666;
+}
+
+.listing-detail-page .listing-numbers {
+   padding-bottom: 5px;
+   border-bottom: 1px solid #666;
+   margin-bottom: 10px;
+}
+.listing-detail-page .listing-numbers span {
+   font-size: 18px;
+}
+.listing-detail-page .listing-numbers span i{
+   font-size: 15px;
+   color: #a6192e;
+   margin-right: 5px;
+}
+.listing-detail-page .details-content {
+   margin-bottom: 40px;
+}
+.listing-detail-page .details-content h4{
+   font-weight: 700;
+   font-size: 22px;
+   line-height: 28px;
+}
+.listing-detail-page .details-content #readmorepara{
+   max-height: 220px;
+   overflow: hidden;
+   transition: all 0.2s ease-in-out;
+}
+.listing-detail-page .details-content #readmorepara.active{
+   max-height: 100%;
+}
+.listing-detail-page .details-content p , .listing-detail-page .details-content span{
+   font-size: 14px;
+   line-height: 20px;
+}
+.listing-detail-page .details-content span {
+   text-align: right;
+   cursor: pointer;
+   font-weight: 600;
+   display: block;
+}
+.listing-detail-page .accordion-button.collapsed , .listing-detail-page .accordion-button , .listing-detail-page .accordion-body{
+   padding: 0.5rem 1.25rem;
+}
+.listing-detail-page .listing-details {
+   margin-bottom: 50px;
+}
+
+.map-listing .container-fluid {
+   padding: 0;
+}
+
+#field_3_13 p {
+   font-size: 8px;
+   margin-bottom: 0;
+}
+.listing-detail-page {
+   position: relative;
+}
+.btn-actions {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+   position: absolute;
+   top: 15px;
+   right: 0;
+}
+.btn-actions .btn-action{
+   border: 1px solid #a6192e;
+   color: #a6192e;
+   background-color: transparent;
+   border-radius: 20px;
+   min-width: 100px;
+   transition: all 0.3s ease-in-out;
+}
+
+.btn-actions .btn-action:hover{
+   background-color: #a6192e;
+   color: #fff;
+}
+
+@media screen and (max-width:1250px) {
+.btn-actions {
+   position: relative;
+   margin-bottom: 50px;
+}
+.listing-detail-page .listing-details {
+   margin-bottom: 10px;
+}
+}
+@media screen and (max-width:767px) {
+   .listing-detail-page .inner h3 {
+      font-size: 22px;
+      line-height: 28px;
+   }
+   .listing-detail-page .details-content h4 {
+      font-size: 18px;
+      line-height: 24px;
+  }
+}
+
+.statement-link a box-icon{
+   height: 18px;
+}
+.statement-link a{
+   font-size: 14p;
+   line-height: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 100%;
+   padding-bottom: 8px;
+   border-bottom: 1px solid #666;
+}
+.listing-detail-page:has(.statement-link) .details-content {
+   margin-bottom: 30px;
+}
+/**listing page**/
+
+
+/**About-us page**/
+
+.hero.about-page .inner {
+   background-image: none;
+}
+.cta-banner:has(.btn-cta-big.grey) .container-fluid {
+   padding: 0;
+}
+.image-head-wrapper .details-img{
+   display: flex;
+   align-items: flex-end;
+   justify-content: space-between;
+   margin-bottom: 50px;
+}
+.image-head-wrapper {
+   margin-top: 50px;
+}
+.image-head-wrapper .details-img .person{
+   margin-left: 10px;
+}
+.image-head-wrapper .details-img .person p{
+   font-size: 16px;
+   line-height: 20px;
+   margin-bottom: 5px;
+   font-weight: 600;
+}
+.image-head-wrapper .details-img .person span{
+   font-size: 14px;
+   line-height: 20px;
+}
+.image-head-wrapper .details-img img{
+   max-width: 80%;
+   width: 100%;
+}
+@media screen and (max-width:767px) {
+   .image-head-wrapper .details-img {
+      flex-direction: column;
+      align-items: flex-start;
+   }
+   .image-head-wrapper .person {
+      margin: 0;
+      margin-top: 10px;
+   }
+   .image-head-wrapper .details-img img{
+      max-width: 100%;
+   }
+}
+
+footer .footer-nav.privacy {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   width: 100%;
+}
+footer .footer-nav.privacy ul{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+   margin-bottom: 10px;
+}
+
+footer .footer-nav.social{
+   flex-direction: column;
+   display: inline-flex;
+   align-items: flex-start;
+   margin-top: 20px;
+   width: 100%;
+}
+footer .footer-nav.social p{
+   font-weight: 700;
+   color: #fff;
+}
+footer .footer-nav.social ul i{
+   font-size: 24px;
+}
+footer .footer-nav.social ul{
+   flex-direction: row;
+   display: flex;
+   gap: 10px;
+}
+/**About-us page**/

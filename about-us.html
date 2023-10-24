@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WIPOV</title>
+    <link rel="stylesheet" href="assets/css/Style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+      integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css"
+      integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container-fluid">
+        <div class="inner justify-content-between">
+          <!-- toggler -->
+          <div class="brand-logo">
+            <a href="index.html"><img src="" alt="" /></a>
+          </div>
+          <div class="navmenus">
+            <nav>
+              <ul class="Navitems d-none d-lg-flex">
+                <li><a href="Rent.html">Rent</a></li>
+                <li><a href="Buy.html">Buy</a></li>
+                <li><a href="Sell.html">Sell</a></li>
+                <li><a href="property-management.html">Short Stay</a></li>
+                <li><a href="property-management.html">Property Management</a></li>
+                <li><a href="">Building Info</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <button
+              class="btn canvas-toggler float-start"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvas"
+              role="button"
+            >
+              <i
+                class="fa-solid fa-bars"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvas"
+              ></i>
+            </button>
+          
+          <!-- <div class="nav-actions d-none d-lg-flex">
+            <a href="">Language</a>
+            <div class="header-search d-flex align-items-center">
+              <input type="search" class="search-input" placeholder="Search" />
+              <a class="search-toggler"><i class="fas fa-search"></i></a>
+            </div>
+            <a href=""><i class="fa-regular fa-user"></i></a>
+          </div> -->
+          <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvas"
+            data-bs-keyboard="false"
+            data-bs-backdrop="false"
+          >
+            <div class="offcanvas-body px-0">
+              <ul
+                class="Mainsidenav nav flex-column mb-sm-auto mb-0 align-items-start"
+                id="menu"
+              >
+                <li class="nav-item">
+                  <button
+                    type="button"
+                    class="btn-close text-reset"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </li>
+                <li class="nav-item">
+                  <a href="Rent.html" class="nav-link text-truncate">
+                    <span class="d-sm-inline">Rent</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-truncate dropdown-anchor"
+                    data-bs-toggle="collapse"
+                    href="#Buy"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="Buy"
+                    ><i class="fa-solid fa-angle-down fs-6 me-2"></i>Buy
+                  </a>
+                  <div class="collapse" id="Buy">
+                    <div class="card-body">
+                      <a href="">Residential</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a href="Sell.html" class="nav-link text-truncate">
+                    <span class="d-sm-inline">Sell</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-truncate dropdown-anchor"
+                    data-bs-toggle="collapse"
+                    href="#Mannage"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="Mannage"
+                    ><i class="fa-solid fa-angle-down fs-6 me-2"></i>Mannagement
+                  </a>
+                  <div class="collapse" id="Mannage">
+                    <div class="card-body">
+                      <a href="">Residential</a>
+                      <a href="">Build to Rent</a>
+                      <a href="">Commercial</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link text-truncate">
+                    <span class="d-sm-inline">Projects</span>
+                  </a>
+                </li>
+              </ul>
+              <ul
+                class="Secondarysidenav nav nav-pills flex-column mb-sm-auto mb-0 align-items-start"
+                id="menu"
+              >
+                <li class="nav-item">
+                  <a href="#" class="nav-link text-truncate">
+                    <span class="d-sm-inline">About Elite</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-truncate dropdown-anchor"
+                    data-bs-toggle="collapse"
+                    href="#Realpeople"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="Realpeople"
+                    ><i class="fa-solid fa-angle-down fs-6 me-2"></i>Real people
+                  </a>
+                  <div class="collapse" id="Realpeople">
+                    <div class="card-body">
+                      <a href="">Our Team</a>
+                      <a href="">Become a Liveability Expert</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link text-truncate">
+                    <span class="d-sm-inline">Place Guides</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-truncate dropdown-anchor"
+                    data-bs-toggle="collapse"
+                    href="#HandBook"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="HandBook"
+                    ><i class="fa-solid fa-angle-down fs-6 me-2"></i>Home
+                    HandBook
+                  </a>
+                  <div class="collapse" id="HandBook">
+                    <div class="card-body">
+                      <a href="">Home HandBook</a>
+                      <a href="">Prospective Renters</a>
+                      <a href="">Building Information</a>
+                      <a href="">Maintenance</a>
+                      <a href="">Maintenance Tips</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-truncate dropdown-anchor"
+                    data-bs-toggle="collapse"
+                    href="#ProjectMarketing"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="ProjectMarketing"
+                    ><i class="fa-solid fa-angle-down fs-6 me-2"></i>Project
+                    Marketing
+                  </a>
+                  <div class="collapse" id="ProjectMarketing">
+                    <div class="card-body">
+                      <a href="">Real Service</a>
+                      <a href="">Real Success</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link text-truncate">
+                    <span class="d-sm-inline">StudioElite</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link text-truncate">
+                    <span class="d-sm-inline">News</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link text-truncate">
+                    <span class="d-sm-inline">Contact</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero sell-page about-page">
+      <div class="container-fluid">
+        <div class="inner">
+          <video autoplay muted loop>
+            <source src="https://mre.today/wp-content/uploads/2022/11/Place_Guides_Hero_1440x900_Header_ABOUT_Smooth.mp4" type="video/mp4" />
+          </video>
+            <div class="testimonials pt-3">
+              <div class="head">
+                <h2>Real</h2>
+                <h2>People</h2>
+              </div>
+              <div class="head">
+                <h2><a style="color: transparent;">Serv</a>Real</h2>
+                <h2>Service</h2>
+              </div>
+              <div class="head">
+                <h2>Real</h2>
+                <h2>Result</h2>
+              </div>
+            </div>
+            <p class="hero-bottom">About ELITE</p>
+        </div>
+      </div>
+    </section>
+    <section class="hero-text">
+      <div class="container-fluid">
+        <div class="inner">
+          <div class="head text-start">
+            <p>
+              Founded in 1992, MRE is the realisation of a dream to create a boutique real estate agency that’s all about world-class service and a winning culture. We proudly remain the kind of business that always puts our clients first.
+            </p>
+          </div>
+          <p class="small-text fs-4 fw-normal">Over the last thirty years, MRE has evolved into a full-service project marketing, residential sales and portfolio management firm, known for our real people, real experience, and real results.</p>
+          
+          <div class="image-head-wrapper">
+            <div class="details-img">
+              <img src="assets/images/about1.jpg" alt="">
+              <div class="person">
+                <p>ANN ROGERS</p>
+                <span>Executive Assistant to Founder</span>
+              </div>
+            </div>
+            <div class="head text-start">
+              <p>
+                Experts in Urban Liveability, we have seen Melbourne transform and have been an integral part of this change, connecting great residents with great properties, in great neighbourhoods.
+              </p>
+            </div>
+          </div>
+          <div class="image-head-wrapper">
+            <div class="details-img">
+              <div class="person ms-0">
+                <p>ELITE Team</p>
+              </div>
+              <img  src="assets/images/about1.jpg" alt="">
+            </div>
+            <div class="head text-start">
+              <p>As Melbourne accelerates towards 8 million people by 2050. Our next thirty years will be as bold, innovative, and prolific as our last.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner p-0">
+      <div class="container-fluid">
+        <div class="inner">
+          <div class="btn-cta-big grey">
+            <a href="">JOIN THE ELITE TEAM</a
+            ><i class="bx bx-arrow-back bx-rotate-180 fs-4"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="request-form">
+      <div class="container-fluid">
+        <div class="inner">
+          <div class="head">
+            <h2>FIND OUT<span class="colored"> MORE</span></h2>
+          </div>
+          <form class="form-req">
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="First Name*"
+            />
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Last Name*"
+            />
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Phone*"
+            />
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Email*"
+            />
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+              placeholder="Message"
+            />
+            <button type="submit" class="btn btn-form">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container-fluid">
+        <div class="inner">
+          <!-- <div class="footer-links row">
+            <div class="col-md-6">
+              <div class="logo-wrapper">
+                <a href=""
+                  ><div class="head d-flex">
+                    <h2>REAL DIALOGUE<br />REAL ADVICE</h2>
+                  </div></a
+                >
+                <form>
+                  <div
+                    class="mb-3 input-newsletter d-flex justify-content-between"
+                  >
+                    <input
+                      type="email"
+                      class="form-control email"
+                      id="exampleInputEmail1"
+                      aria-describedby="emailHelp"
+                      placeholder="Enter Your Email"
+                    />
+                    <a class="footer-cta"
+                      >Submit
+                      <i class="bx bx-arrow-back bx-rotate-180 fs-6 m-0"></i
+                    ></a>
+                  </div>
+                  <select class="form-select">
+                    <option selected>About you</option>
+                    <option>Looking to Rent - Renter</option>
+                    <option>Rent out my property - Owner</option>
+                    <option>Looking to Sell</option>
+                    <option>Looking to Buy</option>
+                    <option>Current Elite Renter</option>
+                    <option>Current Elite Owner</option>
+                  </select>
+                </form>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="footer-nav">
+                <ul class="menu">
+                  <li>
+                    <a href="">Rent</a>
+                  </li>
+                  <li>
+                    <a href="">Buy</a>
+                  </li>
+                  <li>
+                    <a href="">Manage</a>
+                  </li>
+                  <li>
+                    <a href="">Places Guides</a>
+                  </li>
+                  <li>
+                    <a href="">About Elite</a>
+                  </li>
+                  <li>
+                    <a href="">News</a>
+                  </li>
+                  <li>
+                    <a href="">Careers at Elite</a>
+                  </li>
+                  <li>
+                    <a href="">Contact</a>
+                  </li>
+                </ul>
+
+                <ul class="menu second">
+                  <li>
+                    <a target="_blank" href="">Owner’s Portal</a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="">Youtube</a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="">LinkedIn</a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="">Facebook</a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="">Instagram</a>
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://mp.weixin.qq.com/s/zyzsY0sqVwF1sJa8WVXyBQ"
+                      >WeChat</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div> -->
+          <div class="footer-copyrights row">
+            <div class="logo">
+              <a href="" class="d-block" style="max-width: 95px"
+                ><img
+                  class="w-100"
+                  src="assets/images/White-shadow-logo.svg"
+                  alt=""
+              /></a>
+            </div>
+            <div class="col-md-10">
+              <div class="address-wrapper text-center text-lg-start">
+                <div class="address">
+                  <a href="" class="d-flex flex-column align-items-start"
+                    ><span>268 Russell street,</span>
+                    <span>Melbourne VIC 3000,</span>
+                    <span>Australia</span>
+                    <span>03 9663 9977</span></a
+                  >
+                  <a href="" class="d-flex flex-column align-items-start"
+                    ><span>455 Elizabeth street,</span>
+                    <span>Melbourne, VIC 3000</span>
+                    <span>Australia</span>
+                    <span>03 9326 9977</span></a
+                  >
+                  <a href="" class="d-flex flex-column align-items-start"
+                    ><span>200 Spencer street,</span>
+                    <span>Melbourne, VIC 3000</span>
+                    <span>Australia</span>
+                    <span>03 9642 2298</span></a
+                  >
+                  <a href="" class="d-flex flex-column align-items-start"
+                    ><span>228 A'Beckett street,</span>
+                    <span>Melbourne, VIC 3000</span>
+                    <span>Australia</span>
+                    <span>03 9088 6299</span></a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="footer-nav social">
+                  <p>Social Media:</p>
+                <ul class="menu second flex-row">
+                  <li>
+                    <a target="_blank" href=""><i class="fa-brands fa-facebook"></i></a>
+                  </li>
+                  <li>
+                    <a target="_blank" href=""><i class="fa-brands fa-instagram"></i></a>
+                  </li>
+                  <li>
+                    <a target="_blank" href=""><i class="fa-brands fa-square-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a target="_blank" href=""><i class="fa-brands fa-youtube"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-nav privacy">
+            <ul class="menu">
+              <li>
+                <a href="">Privacy Policy </a>
+              </li>
+              <li>
+                <a href="">Term & Conditions</a>
+              </li>
+            </ul>
+            <ul class="menu second">
+              <li>
+                <a target="_blank" href="">© Elite 2023</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/dist/boxicons.js"
+      integrity="sha512-Dm5UxqUSgNd93XG7eseoOrScyM1BVs65GrwmavP0D0DujOA8mjiBfyj71wmI2VQZKnnZQsSWWsxDKNiQIqk8sQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      $(".slider-listing").slick({
+        dots: false,
+        arrows: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+      });
+
+      $(".testimonial-slider").slick({
+        dots: true,
+        arrows: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+      });
+
+      $(".people-slider").slick({
+        dots: false,
+        arrows: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 6,
+        adaptiveHeight: true,
+        responsive: [
+          {
+            breakpoint: 1199,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 840,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 650,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: false,
+            },
+          },
+        ],
+      });
+
+      $(".wide-sliders").slick({
+        dots: false,
+        arrows: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 4,
+        adaptiveHeight: true,
+        responsive: [
+          {
+            breakpoint: 1199,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 970,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 660,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: false,
+            },
+          },
+        ],
+      });
+    </script>
+  </body>
+</html>
